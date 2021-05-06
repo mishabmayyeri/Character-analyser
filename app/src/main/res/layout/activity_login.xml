@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/logingradient"
+    tools:context=".LoginActivity">
+            <ProgressBar
+                android:id="@+id/login_progress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="invisible" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/email_input"
+                app:boxBackgroundMode="filled"
+                android:layout_marginRight="80dp"
+                app:boxStrokeColor="@color/black"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_email"
+                android:layout_width="480dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:hint="Email"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:padding="16dp"
+                 />
+            </com.google.android.material.textfield.TextInputLayout>
+    /
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="480dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:background="@drawable/edit_text_rounded"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/email_input"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="16dp"
+            />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_btn"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:layout_below="@id/login_password"
+                android:text="Login"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/white"
+                android:textColor="@color/white"
+                android:layout_marginRight="240dp"
+                />
+<androidx.appcompat.widget.AppCompatImageView
+    android:layout_width="240dp"
+    android:layout_height="240dp"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="80dp"
+    android:background="@mipmap/ic_login_image_foreground"
+    />
+
+        <TextView
+            android:id="@+id/reg_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="New user ? Register"
+            android:layout_below="@id/login_btn"
+            android:layout_marginRight="224dp"
+            android:layout_alignParentRight="true"
+
+            android:textColor="#039BE5" />
+
+
+</RelativeLayout>
+

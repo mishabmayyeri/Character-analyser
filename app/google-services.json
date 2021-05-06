@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "497549604680",
+    "firebase_url": "https://charachteranalyser-default-rtdb.firebaseio.com",
+    "project_id": "charachteranalyser",
+    "storage_bucket": "charachteranalyser.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497549604680:android:716fcaa9cbb2bb658be57d",
+        "android_client_info": {
+          "package_name": "com.example.characteranalyser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497549604680-iebo1alggshajgg6gf604ooj09b2pk42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjxJdsg3L9Y3hzkaVW5uVla_mVa5d1Hvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497549604680-iebo1alggshajgg6gf604ooj09b2pk42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497549604680:android:3a887ed0019024dd8be57d",
+        "android_client_info": {
+          "package_name": "com.integrals.demo_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497549604680-iebo1alggshajgg6gf604ooj09b2pk42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjxJdsg3L9Y3hzkaVW5uVla_mVa5d1Hvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497549604680-iebo1alggshajgg6gf604ooj09b2pk42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
