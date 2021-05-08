@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,12 +22,17 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button tracingBtn;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
+    private ArrayAdapter<Attempt> adapter;
     ListView scoreList;
     TextView studentName;
     TextView studentClass;
@@ -80,13 +86,26 @@ public class MainActivity extends AppCompatActivity {
 
 
             scoreList = findViewById(R.id.score_list);
-            String[] marks = {
-                    "15-02-2021,7:30PM                  Score:78%                  Errors:3               Time:3.72s",
-                    "20-02-2021,5:30PM                  Score:82%                  Errors:1               Time:1.32s",
+            adapter = new ArrayAdapter<Attempt>(
+                    this,
+                    android.R.layout.simple_list_item_1,
+                    new ArrayList<Attempt>()
+            );
+            scoreList.setAdapter(adapter);
+            db.collection("Attempts")
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                            ArrayList<Attempt> attempts = new ArrayList<>();
+                            for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
 
-            };
-            ArrayAdapter<String> markAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, marks);
-            scoreList.setAdapter(markAdapter);
+                                Attempt a = document.toObject(Attempt.class);
+                                attempts.add(a);
+                            }
+                            adapter.addAll(attempts);
+                        }
+                    });
 
             tracingBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

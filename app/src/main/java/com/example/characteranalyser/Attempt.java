@@ -14,6 +14,7 @@ public class Attempt {
     private String AttemptedAt;
 
 
+    public Attempt() {}
     public Attempt(String letter, String ne, String score, String speed,
                    String time, String total, String user,
                    ArrayList<String> screens, String attemptedAt) {
