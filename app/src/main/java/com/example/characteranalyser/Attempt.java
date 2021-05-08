@@ -100,4 +100,9 @@ public class Attempt {
     public void setAttemptedAt(String attemptedAt) {
         AttemptedAt = attemptedAt;
     }
+
+    @Override
+    public String toString() {
+        return this.AttemptedAt + "  " + this.Score + "  " + this.Speed;
+    }
 }
